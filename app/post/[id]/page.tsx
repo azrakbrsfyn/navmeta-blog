@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+export const revalidate = 200;
+
 async function getData(id: string) {
   const data = await prisma.blogPost.findUnique({
     where: {
