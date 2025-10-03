@@ -1,6 +1,5 @@
 import { prisma } from "@/app/utils/db";
 import BackButton from "@/components/general/BackButton";
-import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 // import Link from "next/link";
