@@ -3,12 +3,18 @@
 import { useFormStatus } from "react-dom";
 import { Button } from "../ui/button";
 
-export function Submitbutton() {
+interface SubmitButtonProps {
+  disabled?: boolean;
+}
+
+export function Submitbutton({ disabled = false }: SubmitButtonProps) {
   const { pending } = useFormStatus();
 
+  const isDisabled = pending || disabled;
+
   return (
-    <Button className="w-fit" type="submit" disabled={pending}>
-      {pending ? "Submitting" : "Submit"}
+    <Button className="w-fit" type="submit" disabled={isDisabled}>
+      {isDisabled ? "Submitting..." : "Submit"}
     </Button>
   );
 }

@@ -19,7 +19,7 @@ export function Navbar() {
       <div className="flex items-center gap-6">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            Blog<span className="text-blue-500">Marshal</span>
+            <span className="text-blue-500">NavMeta</span> Blog
           </h1>
         </Link>
 
@@ -30,12 +30,15 @@ export function Navbar() {
           >
             Home
           </Link>
-          <Link
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
-            href="/dashboard"
-          >
-            Dashboard
-          </Link>
+
+          {user && (
+            <Link
+              className="text-sm font-medium hover:text-blue-500 transition-colors"
+              href="/dashboard"
+            >
+              Dashboard
+            </Link>
+          )}
         </div>
       </div>
 

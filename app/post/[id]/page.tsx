@@ -1,8 +1,9 @@
 import { prisma } from "@/app/utils/db";
+import BackButton from "@/components/general/BackButton";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const revalidate = 200;
@@ -29,9 +30,7 @@ export default async function IdPage({ params }: { params: Params }) {
 
   return (
     <div className="max-w-3xl mx-auto py-8 px-4">
-      <Link className={buttonVariants({ variant: "secondary" })} href="/">
-        Back to posts
-      </Link>
+      <BackButton />
 
       <div className="mb-8 mt-6">
         <h1 className="text-3xl font-bold tracking-tight mb-4">{data.title}</h1>

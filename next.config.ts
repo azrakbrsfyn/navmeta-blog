@@ -13,6 +13,21 @@ const nextConfig: NextConfig = {
         protocol: "https",
         port: "",
       },
+      {
+        hostname: "www.tendenciainternacional.com",
+        protocol: "https",
+        port: "",
+      },
+      {
+        hostname: "www.rosemontmedia.com",
+        protocol: "https",
+        port: "",
+      },
+      {
+        hostname: "ik.imagekit.io",
+        protocol: "https",
+        port: "",
+      },
     ],
   },
 };
